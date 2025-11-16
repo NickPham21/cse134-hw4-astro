@@ -1,5 +1,4 @@
 {
-	"main": "dist/_worker.js/index.js",
 	"name": "tidal-star",
   "compatibility_date": "2025-11-16",
   "pages_build_output_dir": "./dist",
@@ -8,7 +7,7 @@
     "global_fetch_strictly_public"
   ],
 	"assets": {
-		"binding": "ASSETS",
+		"binding": "assets",
 		"directory": "./dist"
 	},
 	"observability": {
