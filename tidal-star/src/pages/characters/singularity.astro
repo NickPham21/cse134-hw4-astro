@@ -1,0 +1,38 @@
+---
+    import CharPageLayout from '../../layouts/CharPageLayout.astro';
+    const killerTitle = "The Singularity";
+    const killerPortrait = "../src/assets/singularity_portrait.png";
+    const powerIcon = "../src/assets/singularity_power_icon.png";
+    const perkName1 = "Forced Hesitation";
+    const perkName2 = "Genetic Limits";
+    const perkName3 = "Machine Learning";
+    const perkIcon1 = "../src/assets/IconPerks_forcedHesitation.png";
+    const perkIcon2 = "../src/assets/IconPerks_geneticLimits.png";
+    const perkIcon3 = "../src/assets/IconPerks_machineLearning.png";
+---
+
+<CharPageLayout killerTitle={killerTitle} killerPortrait={killerPortrait} powerIcon={powerIcon} perkName1={perkName1} perkName2={perkName2} perkName3={perkName3} perkIcon1={perkIcon1} perkIcon2={perkIcon2} perkIcon3={perkIcon3}>
+    <p slot="killer-description">The Singularity (Designated HUX-A7-13 by its creators) is a twisted combination of flesh and machine.
+        It excels at surveillance and map control with its unique power.</p>
+        
+    <p slot="power-description">The Singularity's main power is <dfn>Quantum Instantiation</dfn>. By pressing the power button, it can aim its weapon, 
+        and pressing the attack button while aiming shoots out a <dfn>Biopod</dfn> on the surface it targets. Up to 8 <dfn>Biopods</dfn> can exist at a time.
+        It can press the secondary power button to switch views with a <dfn>Biopod</dfn>. While controlling a <dfn>Biopod</dfn>, it can scout the map and gather information,
+        and additionally looking at a survivor through a <dfn>Biopod</dfn> for a short duration will tag them with a <dfn>Temporal Slipstream</dfn>. 
+        The Singularity can teleport instantly to a survivor with a <dfn>Temporal Slipstream</dfn> either by looking at them through the <dfn>Biopod</dfn> 
+        or by shooting them directly with their weapon. Right after teleporting, the Singularity enters <dfn>Overclocked</dfn> mode.
+        During <dfn>Overclock</dfn>, it vaults windows and breaks pallets much faster and are immune to stuns. Dropping a pallet on the Singularity during <dfn>Overclock</dfn> will remove <dfn>Overclock</dfn> and slow it down for a bit.
+        Survivors afflicted with a <dfn>Temporal Slipstream</dfn> can spread it to other survivors. 
+        However, they can also remove it by getting and using an <dfn>EMP Device</dfn> scattered across the map. Using an <dfn>EMP Device</dfn> also disables nearby <dfn>Biopods</dfn>.</p>
+    <p slot="perk1-description">When a survivor is put in the <dfn>Downed</dfn> state, all nearby survivors suffer from reduced movement speed for a short duration.</p>
+    <p slot="perk2-description">When a survivor loses a health state, they suffer from <dfn>Exhausted</dfn> for a short duration. <dfn>Exhausted</dfn> survivors cannot use exhaustion-based perks.</p>
+    <p slot="perk3-description">Damaging a generator marks it. When marked generators are completed, gain a large movement speed bonus and the <dfn>Undetectable</dfn> status effect.
+        The <dfn>Undetectable</dfn> status effect hides your aura and terror radius.</p>
+    <ul slot="playstyle-tips">
+        <li>Place your cameras around the map, especially common areas where survivors pass through.</li>
+        <li>Place your cameras high up, preferably in open areas, to maximize their field of view.</li>
+        <li>During the start of a chase, tag a survivor with <dfn>Temporal Slipstream</dfn> as soon as possible to fully utilize <dfn>Overclock</dfn>.</li>
+        <li>Use your power wisely! It is better to teleport to survivors up close by shooting your weapon directly. If they are far away or out of sight, use your <dfn>Biopods</dfn> to scout and tag them first.</li>
+        <li><dfn>Biopods</dfn> caught within an <dfn>EMP</dfn> explosions are disabled for a while. You can minigate this by manually replacing disabled <dfn>Biopods</dfn>.</li>
+    </ul>
+</CharPageLayout>

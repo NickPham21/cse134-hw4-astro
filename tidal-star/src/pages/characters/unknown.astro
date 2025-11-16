@@ -1,0 +1,36 @@
+---
+    import CharPageLayout from '../../layouts/CharPageLayout.astro';
+    const killerTitle = "The Unknown";
+    const killerPortrait = "../src/assets/unknown_portrait.png";
+    const powerIcon = "../src/assets/unknown_power_icon.png";
+    const perkName1 = "Unbound";
+    const perkName2 = "Undone";
+    const perkName3 = "Unforeseen";
+    const perkIcon1 = "../src/assets/IconPerks_unbound.png";
+    const perkIcon2 = "../src/assets/IconPerks_undone.png";
+    const perkIcon3 = "../src/assets/IconPerks_unforeseen.png";
+---
+
+<CharPageLayout killerTitle={killerTitle} killerPortrait={killerPortrait} powerIcon={powerIcon} perkName1={perkName1} perkName2={perkName2} perkName3={perkName3} perkIcon1={perkIcon1} perkIcon2={perkIcon2} perkIcon3={perkIcon3}>
+    <p slot="killer-description">The Unknown is a being beyond understanding. It excels at map control and disorienting survivors with its unpredictable movement abilities.
+        It can also attack from a distance with its unique power.</p>
+        
+    <p slot="power-description">The Unknown's main power is <dfn>UVX</dfn>. By pressing the power button, it can aim the <dfn>UVX</dfn> 
+        and pressing the attack button while aiming shoots an arc projectile that explodes on impact.
+        Survivors caught in the explosions suffer from the <dfn>Weakened</dfn> status effect. <dfn>Weakened</dfn> survivors suffer auditory hallucinations and 
+        will lose a health state if hit with <dfn>UVX</dfn> again. Survivors can recover from <dfn>Weakened</dfn> by looking at The Unknown for a short duration.
+        The Unknown also has a secondary ability, <dfn>Hallucinations</dfn>. It periodically leaves behind <dfn>Hallucinations</dfn>, a static copy of itself. 
+        Up to 4 <dfn>Hallucinations</dfn> can exist at a time. The Unknown can choose to swap with any of its <dfn>Hallucinations</dfn> 
+        by pressing the secondary power button to confuse survivors and quickly traverse the map. 
+        Survivors can remove the <dfn>Hallucinations</dfn> by interacting with them for a short period. However, if they cancel the action within
+        this period, they fail to remove the <dfn>Hallucination</dfn> and become <dfn>Weakened</dfn>.</p>
+    <p slot="perk1-description">When a survivor becomes injured, after vaulting a window you gain increased movement speed for a short duration.</p>
+    <p slot="perk2-description">Gain tokens when a survivor fails a skill check. When damaging a generator, additional damage is dealt
+        and the generator is blocked for a short duration. The damage and block duration increases with the number of tokens.</p>
+    <p slot="perk3-description">Damaging a generator transfers your terror radius to it for a short duration.</p>
+    <ul slot="playstyle-tips">
+        <li>Duck and Weave out of sight after hitting a survivor with <dfn>UVX</dfn>, to prevent them from removing <dfn>Weakened</dfn>.</li>
+        <li>Teleport to a <dfn>Hallucination</dfn> mid-chase to confuse survivors and quickly traverse the map.</li>
+        <li>Perks that let you see survivors from a distance synergize well with The Unknown's playstyle, since it can teleport to them quickly.</li>
+    </ul>
+</CharPageLayout>
