@@ -48,7 +48,7 @@ body {
     
     main {
         flex: 1;
-        min-height: 70vh;
+        min-height: 80vh;
     }
 
 
@@ -89,6 +89,7 @@ body {
     }
 
     footer {
+        min-height: 20vh;
         background-color: var(--header-bg-color);
         nav {
             color: var(--text-color);
