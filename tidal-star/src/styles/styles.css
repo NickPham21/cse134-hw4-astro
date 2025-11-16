@@ -7,12 +7,15 @@
     --link-highlight-color: #85150f;
     font-size: 16px;
 }
-
+/* Reset CSS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Animations */
+
 
 body {
     background-color: var(--bg-color);
@@ -20,7 +23,11 @@ body {
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    
+    main {
+        flex: 1;
+        min-height: 70vh;
+    }
 
 
     h1 {
@@ -33,7 +40,7 @@ body {
         padding: 1em;
     }
     
-    p{
+    p, cite{
         margin: 1em;
     }
     dfn {
