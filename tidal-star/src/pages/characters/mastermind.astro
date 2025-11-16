@@ -3,5 +3,17 @@
     const killerTitle = "The Mastermind";
 ---
 
-<CharPageLayout killerTitle={killerTitle}/>
+<CharPageLayout killerTitle={killerTitle}>
+    <p slot="killer-description">The Mastermind (better known as Albert Wesker) is a brilliant and ruthless mastermind
+        infused with the power of Uroboros. He excels at map control with his speed and putting pressure on survivors.</p>
+        
+    <p slot="power-description">The Mastermind's main power is <dfn>Virulent Bound</dfn>, which allows him to traverse the map at 
+        <em>incredibly</em> fast speeds. By holding down the power button, the Mastermind can charge up
+        and dash forward quickly by pressing the attack button when the charge gauge is full. If he
+        hits a survivor while using Virulent Bound, he will deal damage and apply the <dfn>Infected</dfn> status effect.
+        <dfn>Infected</dfn> survivors will slowly build up their <dfn>Infection Meter</dfn> over time
+        until it reaches maximum capacity, at which point they will be <dfn>Fully Infected</dfn>. 
+        <dfn>Fully Infected</dfn> survivors suffer from reduced movement speed and will be immediately downed
+        if the Mastermind hits them with <dfn>Virulent Bound</dfn>.
+    </p>
 </CharPageLayout>
