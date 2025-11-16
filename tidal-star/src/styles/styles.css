@@ -35,6 +35,10 @@ body {
     
     p{
         margin: 1em;
+        dfn {
+            font-style: italic;
+            font-weight: bold;
+        }
     }
     img.killer-portrait {
         border: 0.2rem solid var(--border-color);
