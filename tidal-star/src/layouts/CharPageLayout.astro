@@ -1,4 +1,5 @@
 ---
+import NavBar from '../components/NavBar.astro';
 let { killerTitle } = Astro.props; // The Killer's Title
 let { killerPortrait } = Astro.props; // The path to the Killer's Portrait image
 let { powerIcon } = Astro.props; // The path to the Killer's Power Icon image
@@ -54,16 +55,7 @@ let { perkIcon3 } = Astro.props; // The path to the third perk's icon image
             <slot name='playstyle-tips'/>
 		</main>
 		<footer>
-			<nav> 
-                <h2>Navigation</h2>
-				<ul>
-                    <li><a href="../index">Back to Home</a></li>
-					<li><a href="./characters/mastermind">The Mastermind</a></li>
-					<li><a href="./characters/singularity">The Singularity</a></li>
-					<li><a href="./characters/unknown">The Unknown</a></li>
-				</ul>
-			</nav>
-
+            <NavBar />
 		</footer>
 	</body>
 </html>
