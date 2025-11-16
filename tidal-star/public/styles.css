@@ -1,0 +1,107 @@
+:root {
+    --bg-color: #202020;
+    --text-color: #e6e6e6;
+    --border-color: #252525;
+    --header-bg-color: #6b634f;
+    --portrait-bg-color: #393939;
+    --link-highlight-color: #85150f;
+    font-size: 16px;
+}
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Animations */
+@keyframes scrollUpExit {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-100%); }
+}
+@keyframes scrollUpEnter {
+    0% { transform: translateY(100%); }
+    100% { transform: translateY(0); }
+}
+
+
+/* view transition setup */
+@view-transition {
+    navigation: auto;
+}
+/* Transition for outgoing page */
+::view-transition-old(root) {
+    animation: scrollUpExit 1s forwards;
+}
+/* Transition for incoming page */
+::view-transition-new(root) {
+    animation: scrollUpEnter 1s forwards;
+}
+
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    
+    main {
+        flex: 1;
+        min-height: 80vh;
+    }
+
+
+    h1 {
+        background-color: var(--header-bg-color);
+        text-align: center;
+    }
+    h2, h3 {
+        font-weight: bold;
+        padding: 1em;
+    }
+    
+    p, cite{
+        margin: 1em;
+    }
+    dfn {
+        font-style: italic;
+        font-weight: bold;
+    }
+    img.killer-portrait {
+        border: 0.2rem solid var(--border-color);
+        padding: 0.2rem;
+        background-color: var(--portrait-bg-color);
+        display: block;
+        margin: 1em auto;
+        max-width: 50%;
+        height: auto;
+    }
+    img.power-icon, img.perk-icon {
+        max-width: 20%;
+        height: auto;
+    }
+
+    ul {
+        list-style-type: disc;
+        margin-left: 2em;
+        margin-bottom: 1em;
+    }
+
+    footer {
+        min-height: 20vh;
+        background-color: var(--header-bg-color);
+        nav {
+            color: var(--text-color);
+            a{
+                color: var(--text-color);
+                text-decoration: none;
+                
+            }
+            a:hover {
+                text-decoration: underline;
+                color: var(--link-highlight-color);
+            }
+        }
+    }
+}
