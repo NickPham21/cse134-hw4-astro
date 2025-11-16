@@ -1,9 +1,17 @@
 ---
     import CharPageLayout from '../../layouts/CharPageLayout.astro';
     const killerTitle = "The Mastermind";
+    const killerPortrait = "../src/assets/mastermind_portrait.png";
+    const powerIcon = "../src/assets/mastermind_power_icon.png";
+    const perkName1 = "Awakened Awareness";
+    const perkName2 = "Superior Anatomy";
+    const perkName3 = "Terminus";
+    const perkIcon1 = "../src/assets/IconPerks_awakenedAwareness.png";
+    const perkIcon2 = "../src/assets/IconPerks_superiorAnatomy.png";
+    const perkIcon3 = "../src/assets/IconPerks_terminus.png";
 ---
 
-<CharPageLayout killerTitle={killerTitle}>
+<CharPageLayout killerTitle={killerTitle} killerPortrait={killerPortrait} powerIcon={powerIcon} perkName1={perkName1} perkName2={perkName2} perkName3={perkName3} perkIcon1={perkIcon1} perkIcon2={perkIcon2} perkIcon3={perkIcon3}>
     <p slot="killer-description">The Mastermind (better known as Albert Wesker) is a brilliant and ruthless mastermind
         infused with the power of Uroboros. He excels at map control with his speed and putting pressure on survivors.</p>
         
@@ -16,4 +24,17 @@
         <dfn>Fully Infected</dfn> survivors suffer from reduced movement speed and will be immediately downed
         if the Mastermind hits them with <dfn>Virulent Bound</dfn>.
     </p>
+    <p slot="perk1-description">While carrying a survivor, the auras of nearby survivors are revealed to you.</p>
+    <p slot="perk2-description">When a survivor performs a fast vault near you, your vault speed is increased.</p>
+    <p slot="perk3-description">Once the Exit Gates are powered, all survivors suffer from the <dfn>Broken</dfn> status effect
+        until the gates are opened, at which point the effects linger for an additional 20 seconds.
+        The <dfn>Broken</dfn> status effect prevents survivors from healing themselves or others.</p>
+    <ul slot="playstyle-tips">
+        <li>Use your power to quickly close the distance between you and survivors.</li>
+        <li>Focus on hitting survivors with your power to build up their Infection Meter.</li>
+        <li>Don't try to use your powers on short loops! You cannot turn while using your power.</li>
+        <ul>
+            <li>For more advanced killer players, learning Wesker's Hug Tech is a great way to circumvent this.</li>
+        </ul>
+    </ul>
 </CharPageLayout>

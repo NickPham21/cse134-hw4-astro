@@ -1,5 +1,14 @@
 ---
-let { killerTitle } = Astro.props;
+let { killerTitle } = Astro.props; // The Killer's Title
+let { killerPortrait } = Astro.props; // The path to the Killer's Portrait image
+let { powerIcon } = Astro.props; // The path to the Killer's Power Icon image
+let {perkName1 } = Astro.props; // The name of the first perk
+let { perkName2 } = Astro.props; // The name of the second perk
+let { perkName3 } = Astro.props; // The name of the third perk
+let { perkIcon1 } = Astro.props; // The path to the first perk's icon image
+let { perkIcon2 } = Astro.props; // The path to the second perk's icon image
+let { perkIcon3 } = Astro.props; // The path to the third perk's icon image
+
 ---
 
 <html lang="en">
@@ -19,39 +28,30 @@ let { killerTitle } = Astro.props;
 		</header>
 		<main>
 			<h2>General</h2>
-                <img class='killer-portrait' src="../src/assets/mastermind_portrait.png" alt="{killerTitle}'s Character Portrait"/>
+                <img class='killer-portrait' src={killerPortrait} alt={`${killerTitle} Portrait`} />
                 <slot name='killer-description'/>
             <hr>
 
             <h2>Power</h2>
-                <img class='power-icon' src="../src/assets/mastermind_power_icon.png" alt="{killerTitle}'s Power Icon"/>
+                <img class='power-icon' src="../src/assets/mastermind_power_icon.png" alt={`${killerTitle}'s Power Icon`}/>
                 <slot name="power-description"/>
             <hr>
 
             <h2>Perks</h2>
                 <p>{killerTitle} comes with 3 unique perks:</p>
-                <img class='perk-icon' src="../src/assets/IconPerks_awakenedAwareness.png" alt="Awakened Awareness Perk Icon"/>
-                <h3>Awakened Awareness</h3>
-                    <p>While carrying a survivor, the auras of nearby survivors are revealed to you.</p>
-                <img class='perk-icon' src="../src/assets/IconPerks_superiorAnatomy.png" alt="Superior Anatomy Perk Icon"/>
-                <h3>Superior Anatomy</h3>
-                    <p>When a survivor performs a fast vault near you, your vault speed is increased.</p>
-                <img class='perk-icon' src="../src/assets/IconPerks_terminus.png" alt="Terminus Perk Icon"/>
-                <h3>Terminus</h3>
-                    <p>Once the Exit Gates are powered, all survivors suffer from the <dfn>Broken</dfn> status effect
-                    until the gates are opened, at which point the effects linger for an additional 20 seconds.
-                    The <dfn>Broken</dfn> status effect prevents survivors from healing themselves or others.</p>
+                <img class='perk-icon' src={perkIcon1} alt={`${perkName1} Perk Icon`} />
+                <h3>{perkName1}</h3>
+                    <slot name='perk1-description'/>
+                <img class='perk-icon' src={perkIcon2} alt={`${perkName2} Perk Icon`} />
+                <h3>{perkName2}</h3>
+                    <slot name='perk2-description'/>
+                <img class='perk-icon' src={perkIcon3} alt={`${perkName3} Perk Icon`} />
+                <h3>{perkName3}</h3>
+                    <slot name='perk3-description'/>
             <hr>
 
             <h2>Playstyle Tips</h2>
-            <ul>
-                <li>Use your power to quickly close the distance between you and survivors.</li>
-                <li>Focus on hitting survivors with your power to build up their Infection Meter.</li>
-                <li>Don't try to use your powers on short loops! You cannot turn while using your power.</li>
-                <ul>
-                    <li>For more advanced killer players, learning Wesker's Hug Tech is a great way to circumvent this.</li>
-                </ul>
-            </ul>
+            <slot name='playstyle-tips'/>
 		</main>
 		<footer>
 			<nav> 
